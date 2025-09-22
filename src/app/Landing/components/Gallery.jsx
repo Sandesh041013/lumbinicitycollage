@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-export default function OurGallery() {
+export default function Gallery() {
   const galleryImages = [
     { id: 1, src: "/gallery1.png", alt: "Award Ceremony" },
     { id: 2, src: "/gallery2.png", alt: "Group Trip" },
@@ -15,13 +15,12 @@ export default function OurGallery() {
     { id: 10, src: "/gallery10.png", alt: "Graduation" }
   ];
 
-  // Layout structure for the V-shape (array of columns, each column has 2 images)
   const vLayout = [
-    [0, 5], // first column: top-left, bottom-left
-    [1, 6], // second column: top-left-center, bottom-left-center
-    [2, 7], // center column: top-center, bottom-center
-    [3, 8], // fourth column: top-right-center, bottom-right-center
-    [4, 9]  // fifth column: top-right, bottom-right
+    [0, 5], 
+    [1, 6], 
+    [2, 7], 
+    [3, 8], 
+    [4, 9]  
   ];
 
   const renderImage = (image) => (
@@ -37,7 +36,7 @@ export default function OurGallery() {
   );
 
   return (
-    <section className="py-20 px-6 lg:px-12 bg-gray-50">
+    <section className="py-16 px-4 lg:px-12 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -51,13 +50,14 @@ export default function OurGallery() {
             Experience the energy, achievements, and community of our college.
           </p>
         </div>
-
-        {/* Desktop V-Shaped Layout */}
         <div className="hidden lg:block mb-12">
           <div className="flex justify-center">
             <div className="grid grid-cols-5 gap-10 max-w-6xl">
               {vLayout.map((column, colIndex) => (
-                <div key={colIndex} className={`flex flex-col items-center space-y-4 ${colIndex === 2 ? 'mt-16' : colIndex === 1 || colIndex === 3 ? 'mt-8' : ''}`}>
+                <div
+                  key={colIndex}
+                  className={`flex flex-col items-center space-y-4 ${colIndex === 2 ? 'mt-16' : colIndex === 1 || colIndex === 3 ? 'mt-8' : ''}`}
+                >
                   {column.map(index => renderImage(galleryImages[index]))}
                 </div>
               ))}
@@ -65,21 +65,32 @@ export default function OurGallery() {
           </div>
         </div>
 
-        {/* Tablet Layout */}
         <div className="hidden md:block lg:hidden mb-12">
           <div className="grid grid-cols-2 gap-6">
             {galleryImages.slice(0, 8).map(renderImage)}
           </div>
         </div>
 
-        {/* Mobile Layout */}
+
         <div className="block md:hidden mb-12">
-          <div className="grid grid-cols-1 gap-6">
-            {galleryImages.slice(0, 6).map(renderImage)}
+          <div className="flex flex-col items-center space-y-6">
+
+            <div className="flex w-full justify-between gap-4 px-2">
+              {galleryImages.slice(0, 2).map(renderImage)}
+            </div>
+            <div className="flex w-full justify-center px-4">
+              {renderImage(galleryImages[2])}
+            </div>
+
+            <div className="flex w-full justify-between gap-4 px-2">
+              {galleryImages.slice(3, 5).map(renderImage)}
+            </div>
+            <div className="flex w-full justify-center px-4">
+              {renderImage(galleryImages[5])}
+            </div>
           </div>
         </div>
 
-        {/* View Gallery Button */}
         <div className="text-center">
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-200 flex items-center mx-auto group shadow-lg hover:shadow-xl">
             View Gallery

@@ -48,7 +48,7 @@ export default function AcademicPrograms() {
   return (
     <section className="py-20 px-6 lg:px-12 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+
         <div className="text-center mb-16">
           <span className="px-5 py-2 text-sm font-medium bg-blue-100 text-blue-600 rounded-full inline-block mb-6">
             Academic Excellence
@@ -62,7 +62,7 @@ export default function AcademicPrograms() {
           </p>
         </div>
 
-        {/* Programs Grid */}
+     
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 items-center">
           {programs.map((program, index) => (
             <div 
@@ -73,7 +73,7 @@ export default function AcademicPrograms() {
                   : 'border border-gray-100 p-6 h-fit mb-8'
               }`}
             >
-              {/* Icon */}
+        
               <div className={`w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center ${
                 program.isHighlighted 
                   ? 'bg-rose-50 border-2 border-rose-200' 
@@ -84,17 +84,17 @@ export default function AcademicPrograms() {
                 </span>
               </div>
 
-              {/* Title */}
+           
               <h3 className="text-xl font-bold text-gray-900 text-center mb-4">
                 {program.title}
               </h3>
 
-              {/* Description */}
+          
               <p className="text-gray-600 text-center mb-6 leading-relaxed">
                 {program.description}
               </p>
 
-              {/* Duration and University */}
+         
               <div className="flex justify-between items-center mb-6 text-sm">
                 <div className="flex items-center text-gray-500">
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,7 +107,7 @@ export default function AcademicPrograms() {
                 </div>
               </div>
 
-              {/* Available Programs */}
+            
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-gray-700 mb-3 uppercase tracking-wide">
                   Available Programs
@@ -124,7 +124,7 @@ export default function AcademicPrograms() {
                 </ul>
               </div>
 
-              {/* Learn More Button */}
+         
               <button className={`w-full py-3 px-6 rounded-xl border-2 font-medium transition-all duration-200 flex items-center justify-center group ${program.buttonColor}`}>
                 Learn More
                 <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,7 +135,7 @@ export default function AcademicPrograms() {
           ))}
         </div>
 
-        {/* View All Button */}
+ 
         <div className="text-center">
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-200 flex items-center mx-auto group shadow-lg hover:shadow-xl">
             View All
