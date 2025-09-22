@@ -17,7 +17,7 @@ export default function Message() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center lg:items-start">
           <div className="flex-shrink-0 order-1 lg:order-1">
             <div className="relative">
-              <div className="w-80 h-80 md:w-82 md:h-96 bg-blue-600 rounded-full overflow-hidden shadow-2xl">
+              <div className="w-80 h-80 md:w-82 md:h-96 rounded-full overflow-hidden shadow-2xl">
                 <Image
                   src="/principal.png" 
                   alt="Principal"

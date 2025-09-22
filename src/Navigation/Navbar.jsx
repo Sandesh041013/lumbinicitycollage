@@ -86,7 +86,7 @@ const Navbar = () => {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="bg-[#97887E] text-white flex flex-col justify-between border-none"
+            className="bg-[#2E3192] text-white flex flex-col justify-between border-none"
           >
             <div className="flex flex-col space-y-8 mt-20 ml-10">
               {navLinks.map((link, index) => (
@@ -137,9 +137,9 @@ const Navbar = () => {
               <SheetClose asChild>
                 <Link
                   href="/enroll"
-                  className="block mb-20 text-center px-6 py-3 text-[#4A3F3F] bg-[#EBA747] rounded-full hover:bg-[#3D220F] hover:text-white  transition w-32"
+                  className="block mb-20 text-center px-6 py-3 text-[#4A3F3F] bg-white rounded-full hover:bg-[#3D220F] hover:text-white  transition w-32"
                 >
-                  Enroll Now
+                  Apply Now
                 </Link>
               </SheetClose>
             </div>

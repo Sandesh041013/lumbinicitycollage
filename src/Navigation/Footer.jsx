@@ -12,7 +12,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-[#1C2431] text-gray-300">
-      <div className="max-w-7xl mx-auto px-6 py-12 flex flex-cols-1 md:grid-cols-4 gap-10 justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {/* Quick Links */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-5">Quick Links</h3>
@@ -44,8 +44,8 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Resources + Contact in grid */}
-        <div className="grid gap-10">
+        {/* Resources + Contact */}
+        <div className="sm:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-10">
           {/* Resources */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-5">
@@ -91,8 +91,8 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="bg-[#141A24] py-4">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-5">
-          <p className="text-sm text-gray-400 text-center md:text-left">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-5">
+          <p className="text-sm text-gray-400 text-center sm:text-left">
             Copyright © 2025. All rights reserved.
           </p>
           <div className="flex gap-5 text-gray-300 text-xl">
